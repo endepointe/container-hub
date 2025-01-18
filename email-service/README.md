@@ -2,4 +2,4 @@
 
 
 ## DNS Server:
-- bind9
+- nsd 
