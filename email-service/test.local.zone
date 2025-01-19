@@ -12,6 +12,7 @@ $TTL 3600
         IN      NS      ns1.test.local.
 
 ns1     IN      A       127.0.0.1
-mail	        MX      192.168.50.3
-api	    IN	    A       192.168.50.4
+mail    IN      MX      10 mail.test.local.
+mail    IN      A       192.168.50.3
+api     IN      A       192.168.50.4
 
