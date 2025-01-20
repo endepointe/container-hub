@@ -2,12 +2,15 @@ services:
   dns:
     image: nsd
     container_name: dns
+    build:
+      context: dns
+      dockerfile: Dockerfile
     networks:
       local-docker-network:
         ipv4_address: 192.168.50.2
 
-  smtp_imap:
-    image: smtp_imap
+  mail:
+    image: mail 
     container_name: mail
     build:
       context: ./mail
@@ -18,7 +21,7 @@ services:
       - "587:587"   # SMTP Submission
       - "993:993"   # IMAPS
     environment:
-      - HOSTNAME=mail.test.local
+      HOSTNAME: mail.test.local
     networks:
       local-docker-network:
         ipv4_address: 192.168.50.3
