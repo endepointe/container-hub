@@ -1,5 +1,0 @@
-services:
-    nsd:
-        build: ./nsd.Dockerfile
-    api:
-        build: ./api.Dockerfile
