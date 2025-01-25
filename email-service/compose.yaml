@@ -20,6 +20,7 @@ services:
       - "143:143"   # IMAP
       - "587:587"   # SMTP Submission
       - "993:993"   # IMAPS
+    hostname: mail.test.local
     environment:
       HOSTNAME: mail.test.local
     networks:

@@ -1,0 +1,10 @@
+HELO pointe
+MAIL FROM:<sender@example.com>
+RCPT TO:<root@mail.test.local>
+DATA
+Subject: Test Email
+
+This is a test email.
+.
+QUIT
+

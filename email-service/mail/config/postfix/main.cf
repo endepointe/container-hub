@@ -1,5 +1,13 @@
-mydomain = test.local
-myhostname = mail.$mydomain
+myhostname = mail.test.local
+mydomain = test.local 
 myorigin = $mydomain
-mydestination = $myhostname localhost.$mydomain localhost $mydomain
-proxy_interfaces = 192.168.50.3
+inet_interfaces = all
+inet_protocols = ipv4
+mydestination = $myhostname, test.local, localhost.$mydomain, localhost
+relayhost =
+mynetworks = 127.0.0.0/8, 192.168.50.0/24, 172.17.0.1/16, 10.0.0.0/24
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+local_recipient_maps = # leaving blank removes the check but explore these params more

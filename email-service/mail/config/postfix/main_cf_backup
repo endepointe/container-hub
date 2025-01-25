@@ -1,0 +1,5 @@
+mydomain = test.local
+myhostname = mail.$mydomain
+myorigin = $mydomain
+mydestination = $myhostname localhost.$mydomain localhost $mydomain
+proxy_interfaces = 192.168.50.3
