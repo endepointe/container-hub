@@ -5,7 +5,7 @@ RUN apk update \
     && apk add nsd bind-tools
 
 COPY ./nsd.conf /etc/nsd/
-COPY ./test.local.zone /etc/nsd/
+COPY ./example.com.zone /etc/nsd/
 
 RUN mkdir -p /run/nsd && chmod 511 /run/nsd
 

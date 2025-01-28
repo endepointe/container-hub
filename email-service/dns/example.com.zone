@@ -1,7 +1,7 @@
-$ORIGIN test.local.
+$ORIGIN example.com.
 $TTL 3600
 
-@       IN      SOA     ns1.test.local. admin.test.local. (
+@       IN      SOA     ns1.example.com. admin.example.com. (
                 1       ; Serial
                 3600    ; Refresh
                 1800    ; Retry
@@ -9,10 +9,10 @@ $TTL 3600
                 86400   ; Minimum TTL
                 )
 
-        IN      NS      ns1.test.local.
+        IN      NS      ns1.example.com.
 
 ns1     IN      A       127.0.0.1
-mail    IN      MX      10 mail.test.local.
+mail    IN      MX      10 mail.example.com.
 mail    IN      A       192.168.50.3
 api     IN      A       192.168.50.4
 

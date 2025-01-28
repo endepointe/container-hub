@@ -16,13 +16,13 @@ services:
       context: ./mail
       dockerfile: Dockerfile
     ports:
-      - "25:25"     # SMTP
-      - "143:143"   # IMAP
-      - "587:587"   # SMTP Submission
-      - "993:993"   # IMAPS
-    hostname: mail.test.local
+      - "25:25"     
+      - "143:143"
+      - "587:587"
+      - "993:993"
+    hostname: mail.example.com
     environment:
-      HOSTNAME: mail.test.local
+      HOSTNAME: mail.example.com
     networks:
       local-docker-network:
         ipv4_address: 192.168.50.3
