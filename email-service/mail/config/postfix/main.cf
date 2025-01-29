@@ -1,9 +1,9 @@
-myhostname = mail.test.local
-mydomain = test.local 
+myhostname = mail.example.com
+mydomain = example.com 
 myorigin = $mydomain
 inet_interfaces = all
 inet_protocols = ipv4
-mydestination = $myhostname, test.local, localhost.$mydomain, localhost
+mydestination = $myhostname, example.com, localhost.$mydomain, localhost
 relayhost =
 mynetworks = 127.0.0.0/8, 192.168.50.0/24, 172.17.0.1/16, 10.0.0.0/24
 mailbox_size_limit = 0
@@ -12,3 +12,5 @@ inet_interfaces = all
 smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
 #leaving blank removes the check but explore these params more
 local_recipient_maps = 
+maillog_file = /var/log/postfix.log
+maillog_file_permissions = 0644

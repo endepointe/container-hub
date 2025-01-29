@@ -7,7 +7,7 @@ RUN apk update \
 COPY ./nsd.conf /etc/nsd/
 COPY ./example.com.zone /etc/nsd/
 
-RUN mkdir -p /run/nsd && chmod 511 /run/nsd
+RUN mkdir -p /run/nsd && chmod 544 /run/nsd
 
 EXPOSE 53/tcp
 EXPOSE 53/udp
