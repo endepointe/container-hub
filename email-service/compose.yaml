@@ -3,7 +3,7 @@ services:
     image: nsd
     container_name: dns
     build:
-      context: dns
+      context: ./dns
       dockerfile: Dockerfile
     networks:
       local-docker-network:
@@ -27,7 +27,6 @@ services:
       local-docker-network:
         ipv4_address: 192.168.50.3
     dns: 192.168.50.2
-      #command: tail -f /dev/null
 
 networks:
   local-docker-network:
