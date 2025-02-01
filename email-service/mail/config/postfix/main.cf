@@ -23,5 +23,5 @@ mailbox_size_limit = 25600000
 # Handle postfix-style extensions.
 recipient_delimiter = +
 
-# Applies to rcpt to command
+# Applies 'to rcpt' to command
 smtpd_relay_restrictions = reject_unauth_destination

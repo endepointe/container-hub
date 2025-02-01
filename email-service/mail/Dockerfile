@@ -1,7 +1,7 @@
 # mailserver running postfix and dovecot (tbd) 
 FROM alpine:3.20
 
-RUN apk add postfix openssl
+RUN apk add postfix dovecot openssl
 
 COPY ./config/postfix/main.cf /etc/postfix/main.cf
 
