@@ -1,0 +1,6 @@
+user = pguser
+password = verysecurepassword
+
+dbname = emails
+
+query = select user from emails where user='%s';

@@ -28,6 +28,18 @@ services:
         ipv4_address: 192.168.50.3
     dns: 192.168.50.2
 
+  ws1:
+    image: ws1
+    container_name: ws1
+    command: tail -f /dev/null
+    networks:
+      local-docker-network:
+        ipv4_address: 192.168.50.100
+    ports:
+      - "7000:7000"
+      - "8000:8000"
+    dns: 8.8.8.8 
+
 networks:
   local-docker-network:
     driver: bridge

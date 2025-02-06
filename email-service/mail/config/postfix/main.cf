@@ -1,10 +1,13 @@
 # Parameters defined at: https://www.postfix.org/postconf.5.html
 
+alias_maps = mysql:/etc/aliases
+alias_database = mysql:/etc/aliases
+
 inet_interfaces = all
 inet_protocols = ipv4
 
-# Leave blank Sending to any, non-existant user is all we need for now.
-local_recipient_maps = 
+# Leave blank to send to any, non-existant user.
+local_recipient_maps = proxy:unix:passwd.byname $alias_maps 
 
 # Logging for debugging
 maillog_file = /var/log/postfix.log
