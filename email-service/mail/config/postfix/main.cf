@@ -1,8 +1,5 @@
 # Parameters defined at: https://www.postfix.org/postconf.5.html
 
-alias_maps = mysql:/etc/aliases
-alias_database = mysql:/etc/aliases
-
 inet_interfaces = all
 inet_protocols = ipv4
 
@@ -28,3 +25,8 @@ recipient_delimiter = +
 
 # Applies 'to rcpt' to command
 smtpd_relay_restrictions = reject_unauth_destination
+
+virtual_mailbox_domains = mysql:/etc/postfix/mysql-virtual-mailbox-domains.cf
+virtual_mailbox_maps = mysql:/etc/postfix/mysql-virtual-mailbox-maps.cf
+virtual_alias_maps = mysql:/etc/postfix/mysql-virtual-alias-maps.cf
+

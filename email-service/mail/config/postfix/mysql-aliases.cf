@@ -1,6 +1,6 @@
-user = pguser
-password = verysecurepassword
+user = root 
+password = toor 
 
 dbname = emails
 
-query = select user from emails where user='%s';
+query = select user from users where user='%s';
