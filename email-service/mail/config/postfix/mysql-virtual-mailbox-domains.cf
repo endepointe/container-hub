@@ -1,0 +1,5 @@
+user = root
+password = toor 
+hosts = localhost 
+dbname = emails
+query = SELECT 1 FROM users WHERE domain='%s' LIMIT 1;

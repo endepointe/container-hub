@@ -1,0 +1,6 @@
+user = root
+password = toor 
+hosts = localhost 
+dbname = emails
+query = SELECT maildir FROM users WHERE email='%s' LIMIT 1;
+

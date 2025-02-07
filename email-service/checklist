@@ -1,0 +1,5 @@
+used blank and secure installation input and created container\n
+the password isnt checked to log into mysql client
+when ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'toor';
+FLUSH PRIVILEGES; is used, emails are received
+This query worked: GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'toor' WITH GRANT OPTION; FLUSH PRIVILEGES;
