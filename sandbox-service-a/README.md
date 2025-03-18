@@ -2,15 +2,13 @@
 
 ```mermaid
 ---
-title: Node
+title: Sandbox-Service-A 
 ---
 flowchart LR
-    Frontend[Frontend
-Collects various input data such as ip, user actions, and text data for demo purposes.
+    Frontend["`**Frontend**
 
-Allow user to interact with a docker shell.
-
-Give user tasks to complete within this container.
-
-Use principle of least privileges to demonstrate ACLs.]
+    __Tasks__
+    Sign-in with Auth0
+    Upload files
+    Download files`"]
 ```
