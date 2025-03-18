@@ -5,5 +5,12 @@
 title: Node
 ---
 flowchart LR
-    id[text in the box]
+    Frontend[Frontend
+Collects various input data such as ip, user actions, and text data for demo purposes.
+
+Allow user to interact with a docker shell.
+
+Give user tasks to complete within this container.
+
+Use principle of least privileges to demonstrate ACLs.]
 ```
