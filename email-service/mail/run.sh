@@ -2,6 +2,8 @@
 
 # create mysql runtime directory exists
 mkdir -p /run/mysqld && touch /run/mysqld/softlevel
+mkdir -p /var/mail/vhosts
+chown -R postfix:postfix /var/mail/vhosts
 
 # init mysql database
 mysql_install_db --user=mysql --datadir=/var/lib/mysql

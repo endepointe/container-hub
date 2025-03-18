@@ -11,9 +11,9 @@ mydomain = example.com
 # The domain name is defaulted to $myhostname.
 myorigin = $mydomain
 # Senders get rejected if domain not listed.
-#mydestination = $myhostname, www.$mydomain, $mydomain, localhost.$mydomain, localhost
+mydestination = $myhostname, www.$mydomain, $mydomain, localhost.$mydomain, localhost
 # Set to localhost for mysql service to work properly
-mydestination = localhost
+#mydestination = localhost
 # Networks allowed to relay mail through postfix.
 mynetworks = 127.0.0.0/8, 192.168.50.0/24, 172.17.0.1/16, 10.0.0.0/24
 # Handle mailbox cleanup and filtering early, keeping size smaller. 
@@ -25,7 +25,7 @@ recipient_delimiter = +
 # Applies 'to rcpt' to command
 smtpd_relay_restrictions = reject_unauth_destination
 
-virtual_mailbox_domains = mysql:/etc/postfix/mysql-virtual-mailbox-domains.cf
-virtual_mailbox_maps = mysql:/etc/postfix/mysql-virtual-mailbox-maps.cf
-virtual_alias_maps = mysql:/etc/postfix/mysql-virtual-alias-maps.cf
-virtual_mailbox_base = /var/mail
+#virtual_mailbox_domains = mysql:/etc/postfix/mysql-virtual-mailbox-domains.cf
+#virtual_mailbox_maps = mysql:/etc/postfix/mysql-virtual-mailbox-maps.cf
+#virtual_alias_maps = mysql:/etc/postfix/mysql-virtual-alias-maps.cf
+#virtual_mailbox_base = /var/mail
