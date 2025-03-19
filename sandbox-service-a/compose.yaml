@@ -8,5 +8,13 @@ services:
       dockerfile: Dockerfile
     env_file:
       - path: ./auth/.env.dev
+  ftp:
+    container_name: ftp
+    build:
+      context: ftp
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "20:20"
+      - "21:21"
+      - "40000:40000"
+      - "50000:50000"
