@@ -1,6 +1,13 @@
 FROM alpine:3
 
-RUN apk add --no-cache vsftpd
+RUN apk update && apk upgrade && apk add --no-cache vsftpd
+
+RUN adduser -D -g 'ftp' ftpuser
+RUN echo "ftpuser:password" | chpasswd
+RUN mkdir -p /home/ftpuser/ftp
+RUN chown -R ftpuser:ftp /home/ftpuser/ftp
+RUN chmod -R 776 /home/ftpuser/ftp
+RUN echo "Test contents of file in /home/ftpuser/ftp/" > /home/ftpuser/ftp/flag.txt
 
 COPY vsftpd.conf /etc/vsftpd/vsftpd.conf
 
