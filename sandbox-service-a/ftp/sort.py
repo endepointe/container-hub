@@ -41,5 +41,4 @@ if sys.argv[1] == "run":
 else:
     print(f"Usage: {sys.argv[0]} run")
     sys.exit()
-from bs4 import BeautifulSoup
 
