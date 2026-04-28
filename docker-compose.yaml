@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports: 
+      - "6161:6161"
+    volumes:
+      - .:/workspace
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+    command: python3 main.py
